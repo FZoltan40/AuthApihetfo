@@ -30,3 +30,12 @@ C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\obj\Debug\net8.0\refint\Wea
 C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\obj\Debug\net8.0\WeatherForecastApi.pdb
 C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\obj\Debug\net8.0\WeatherForecastApi.genruntimeconfig.cache
 C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\obj\Debug\net8.0\ref\WeatherForecastApi.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\farka\GitWorkDir\AuthApi\WeatherForecastApi\obj\Debug\net8.0\WeatherForecastApi.sourcelink.json
