@@ -18,7 +18,15 @@ namespace AuthApi.Controllers
         [HttpPost("login")]
         public async Task<ActionResult> LoginPost(LoginRequestDto loginRequestDto)
         {
-            return Ok();
+            var log = await auth.Login(loginRequestDto);
+
+            if (log != null)
+            {
+                return Ok(log);
+            }
+
+            return BadRequest();
+
         }
 
         [HttpPost("register")]
