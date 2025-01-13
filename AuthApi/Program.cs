@@ -2,6 +2,7 @@
 using AuthApi.Models;
 using AuthApi.Services;
 using AuthApi.Services.IService;
+using Microsoft.AspNetCore.Identity;
 
 namespace AuthApi
 {
@@ -15,6 +16,11 @@ namespace AuthApi
 
             builder.Services.AddScoped<IAuth, AuthService>();
             builder.Services.AddScoped<ITokenGenerator, TokenGenarator>();
+
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>()
+              .AddDefaultTokenProviders();
+
+            builder.Services.Configure<JwtOption>(builder.Configuration.GetSection("AuthSettings:JwtOptions"));
 
             // Add services to the container.
 
@@ -35,7 +41,6 @@ namespace AuthApi
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

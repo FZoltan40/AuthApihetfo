@@ -24,7 +24,15 @@ namespace AuthApi.Controllers
         [HttpPost("register")]
         public async Task<ActionResult> RegisterPost(RegisterRequestDto registerRequestDto)
         {
-            return Ok();
+            var user = await auth.Register(registerRequestDto);
+
+            if (user != null)
+            {
+                return Ok(user);
+            }
+
+            return BadRequest();
+
         }
 
     }
