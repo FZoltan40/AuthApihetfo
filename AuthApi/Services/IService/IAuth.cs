@@ -6,5 +6,6 @@ namespace AuthApi.Services.IService
     {
         Task<object> Login(LoginRequestDto loginRequestDto);
         Task<object> Register(RegisterRequestDto registerRequestDto);
+        Task<object> AssignRole(AssignRoleRequestDto assignRoleRequestDto);
     }
 }

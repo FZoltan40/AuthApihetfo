@@ -22,6 +22,25 @@ namespace AuthApi.Services
             this.jwtTokenGenerator = jwtTokenGenerator;
         }
 
+        public async Task<object> AssignRole(AssignRoleRequestDto assignRoleRequestDto)
+        {
+            var user = await _appDbContext.applicationUsers.FirstOrDefaultAsync(usr => usr.NormalizedUserName == assignRoleRequestDto.UserName.ToUpper());
+
+            if (user != null)
+            {
+                if (!roleManager.RoleExistsAsync(assignRoleRequestDto.RoleName).GetAwaiter().GetResult())
+                {
+                    roleManager.CreateAsync(new IdentityRole(assignRoleRequestDto.RoleName)).GetAwaiter().GetResult();
+                }
+
+                await userManager.AddToRoleAsync(user, assignRoleRequestDto.RoleName);
+
+                return new { result = new { usrName = user.UserName, email = user.Email }, message = "Sikeres hozzárendelés." };
+            }
+
+            return new { result = "", message = "Sikertelen hozzárendelés." };
+        }
+
         public async Task<object> Login(LoginRequestDto loginRequestDto)
         {
             var user = await _appDbContext.applicationUsers.
